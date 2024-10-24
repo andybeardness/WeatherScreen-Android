@@ -60,7 +60,7 @@ fun Screen() {
 
     val fontSize by infiniteTransition.animateFloat(
         initialValue = 64f,
-        targetValue = 96f,
+        targetValue = 80f,
         animationSpec = infiniteRepeatable(
             animation = tween(durationMillis = 2000, easing = LinearEasing),
             repeatMode = RepeatMode.Reverse
