@@ -58,23 +58,13 @@ fun Screen() {
         label = "color"
     )
 
-    val fontSize by infiniteTransition.animateFloat(
-        initialValue = 64f,
-        targetValue = 80f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 2000, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "font"
-    )
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color.Black),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "здарова, заебал", color = color, style = TextStyle(fontSize = fontSize.sp), textAlign = TextAlign.Center)
+        Text(text = "здарова, заебал", color = color, style = TextStyle(fontSize = 80.sp), textAlign = TextAlign.Center)
     }
 }
 
