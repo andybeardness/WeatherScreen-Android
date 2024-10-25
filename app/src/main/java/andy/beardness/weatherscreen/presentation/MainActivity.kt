@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             WeatherScreenTheme {
                 val state by viewModel.state.collectAsState()
-                MainScreen(state)
+                MainScreen(state, onClick = { viewModel.updateForecast() })
             }
         }
     }

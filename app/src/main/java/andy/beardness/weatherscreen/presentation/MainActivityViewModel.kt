@@ -20,7 +20,13 @@ class MainActivityViewModel(
     val state: StateFlow<MainScreenViewState> = _state
 
     init {
+        updateForecast()
+    }
+
+    fun updateForecast() {
         viewModelScope.launch {
+            _state.emit(MainScreenViewState.Loading)
+
             val hours = openMeteoRepository.hours()
 
             val timeNowInMillis = System.currentTimeMillis()
