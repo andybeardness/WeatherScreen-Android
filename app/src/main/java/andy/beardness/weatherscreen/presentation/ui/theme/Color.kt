@@ -1,4 +1,4 @@
-package andy.beardness.weatherscreen.ui.theme
+package andy.beardness.weatherscreen.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
